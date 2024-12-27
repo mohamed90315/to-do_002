@@ -1,0 +1,68 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top section for task details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- CheckBox for marking completion -->
+            <CheckBox
+                android:id="@+id/completeCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Task Name -->
+            <TextView
+                android:id="@+id/taskName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Task Details -->
+            <TextView
+                android:id="@+id/taskDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete Task"
+                android:src="@drawable/ic_delete" />
+        </LinearLayout>
+
+        <!-- Button aligned at the bottom -->
+        <Button
+            android:id="@+id/counterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="16dp"
+            android:text="Start" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
